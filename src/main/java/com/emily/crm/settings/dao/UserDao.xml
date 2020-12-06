@@ -6,7 +6,7 @@
     <select id="login" resultType="User">
         select * from tbl_user where loginAct=#{loginAct} and loginPwd=#{loginPwd}
     </select>
-    <insert id="xxx">
-    insert into xxx values (#{id},#{name},#{email},#{age})
-    </insert>
+<!--    <insert id="xxx">-->
+<!--    insert into xxx values (#{id},#{name},#{email},#{age})-->
+<!--    </insert>-->
 </mapper>

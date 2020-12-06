@@ -42,7 +42,6 @@ public class UserServiceImpl implements UserService{
             throw new LoginException("ip地址受限");
         }
 
-
         return user;
     }
 }

@@ -37,7 +37,7 @@ public class UserController extends HttpServlet {
         loginPwd = MD5Util.getMD5(loginPwd);
 
         String ip = request.getRemoteAddr();
-//        System.out.println(ip);
+        System.out.println(ip);
         UserService us = (UserService) ServiceFactory.getService(new UserServiceImpl());
 
         try {

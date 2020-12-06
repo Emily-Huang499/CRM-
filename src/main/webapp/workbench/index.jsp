@@ -9,7 +9,38 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <meta charset="UTF-8">
 <link href="jquery/bootstrap_3.3.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="jquery/jquery-1.11.1-min.js"></script>
-<script type="text/javascript" src="jquery/bootstrap_3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery/bootstrap_3.3.0/js/bootstrap.min.js"></script><script type="text/javascript">
+
+	//页面加载完毕
+	$(function(){
+
+		//导航中所有文本颜色为黑色
+		$(".liClass > a").css("color" , "black");
+
+		//默认选中导航菜单中的第一个菜单项
+		$(".liClass:first").addClass("active");
+
+		//第一个菜单项的文字变成白色
+		$(".liClass:first > a").css("color" , "white");
+
+		//给所有的菜单项注册鼠标单击事件
+		$(".liClass").click(function(){
+			//移除所有菜单项的激活状态
+			$(".liClass").removeClass("active");
+			//导航中所有文本颜色为黑色
+			$(".liClass > a").css("color" , "black");
+			//当前项目被选中
+			$(this).addClass("active");
+			//当前项目颜色变成白色
+			$(this).children("a").css("color","white");
+		});
+
+		//在页面加载完毕后，在工作区打开相应的页面
+		window.open("workbench/main/index.html","workareaFrame");
+
+	});
+
+</script>
 </head>
 <body>
 	
